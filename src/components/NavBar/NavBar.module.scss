@@ -1,0 +1,13 @@
+@use "../../globalVariables" as vars;
+
+.container {
+  position: fixed;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: vars.$foreground-rgb;
+  color: vars.$onForeground-rgb;
+}

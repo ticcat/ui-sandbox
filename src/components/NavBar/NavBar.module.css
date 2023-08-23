@@ -1,0 +1,11 @@
+.container {
+  position: fixed;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}/*# sourceMappingURL=NavBar.module.css.map */
