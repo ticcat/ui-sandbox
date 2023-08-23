@@ -1,0 +1,12 @@
+@use "../../globalVariables" as vars;
+
+.button {
+  background-color: vars.$onForeground-rgb;
+  height: 90%;
+  width: max-content;
+  min-width: 80px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid vars.$foreground-rgb;
+  color: vars.$foreground-rgb;
+}
