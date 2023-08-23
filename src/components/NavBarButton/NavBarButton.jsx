@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./NavBarButton.module.css";
 
 function NavBarButton({ children }) {

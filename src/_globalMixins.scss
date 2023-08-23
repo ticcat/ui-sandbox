@@ -1,0 +1,10 @@
+@use "sass:color";
+
+@mixin colorWithAlpha($property, $color, $alpha) {
+  #{$property}: rgba(
+    color.red($color),
+    color.green($color),
+    color.blue($color),
+    $alpha
+  );
+}

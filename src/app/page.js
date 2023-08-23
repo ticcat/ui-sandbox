@@ -7,6 +7,9 @@ export default function Home() {
     <>
       <NavBar>
         <NavBarButton>Test</NavBarButton>
+        <NavBarButton>Test</NavBarButton>
+        <NavBarButton>Test</NavBarButton>
+        <NavBarButton>Test</NavBarButton>
       </NavBar>
       <main className={styles.main}>
         <h1>Main Page</h1>

@@ -3,9 +3,9 @@
 .container {
   position: fixed;
   display: flex;
-  height: 60px;
+  height: max-content;
   width: 100%;
-  padding: 0 20px;
+  padding: 10px 20px;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
