@@ -1,20 +1,15 @@
 import Head from "next/head";
 import styles from "./styles/page.module.css";
-import NavBar from "@/components/NavBar/NavBar";
-import NavBarButton from "@/components/NavBarButton/NavBarButton";
+import TopNavBar from "../../components/TopNavBar/TopNavBar";
+import { metadata } from "../layout";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>UI Sandbox</title>
+        <title>Buttons</title>
       </Head>
-      <NavBar>
-        <NavBarButton>Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-      </NavBar>
+      <TopNavBar></TopNavBar>
       <main className={styles.main}>
         <h1>Buttons</h1>
       </main>

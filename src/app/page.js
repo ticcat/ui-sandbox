@@ -1,7 +1,6 @@
 import Head from "next/head";
-import NavBar from "@/components/NavBar/NavBar";
 import styles from "./styles/page.module.css";
-import NavBarButton from "@/components/NavBarButton/NavBarButton";
+import TopNavBar from "../components/TopNavBar/TopNavBar";
 
 export default function Home() {
   return (
@@ -9,12 +8,7 @@ export default function Home() {
       <Head>
         <title>UI Sandbox</title>
       </Head>
-      <NavBar>
-        <NavBarButton href="/buttons">Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-        <NavBarButton>Test</NavBarButton>
-      </NavBar>
+      <TopNavBar></TopNavBar>
       <main className={styles.main}>
         <h1>Main Page</h1>
       </main>
