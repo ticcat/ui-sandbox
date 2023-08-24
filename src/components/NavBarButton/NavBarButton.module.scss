@@ -14,12 +14,12 @@
   font-size: 18px;
   transition: all 0.15s ease 0s;
 
-  &:hover {
+  @include hover {
     background-color: $onForeground-rgb;
     color: $foreground-rgb;
   }
 
-  &:active {
+  @include active {
     color: $foreground-rgb;
     border: none;
     border-radius: 6px;

@@ -1,4 +1,5 @@
 @use "../../globalVariables" as *;
+@use "../../globalMixins" as *;
 
 .button {
   position: fixed;
@@ -7,11 +8,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   background-color: $foreground-rgb;
   border: none;
   border-radius: 50px;
   z-index: 10;
-  transition: opacity 0.1s ease;
+  transition: all 0.15s ease, border 0.05s ease;
+
+  @include hover {
+    border: 4px solid $foreground-highlight-rgb;
+  }
+
+  @include active {
+    border: 4px solid $foreground-highlight-rgb;
+  }
 }

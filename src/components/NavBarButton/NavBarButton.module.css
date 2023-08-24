@@ -23,6 +23,7 @@
   border: none;
   border-radius: 6px;
   transform: scale(0.95);
+  transform: scale(0.95);
 }
 .button:disabled {
   opacity: 0.3;
