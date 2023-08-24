@@ -2,18 +2,13 @@
 
 import styles from "./TopNavBar.module.css";
 import NavBar from "@/components/NavBar/NavBar";
-import { useProjectStore } from "@/hooks/ProjectStore";
 import NavBarButton from "@/components/NavBarButton/NavBarButton";
-import { usePathname, useRouter } from "next/navigation";
+import HomeButton from "../HomeButton/HomeButton";
+import { useProjectStore } from "@/hooks/ProjectStore";
 
 function TopNavBar() {
-  const path = usePathname();
-  const router = useRouter();
-
   const projects = useProjectStore((state) => state.projects);
   const projectButtons = [];
-
-  const isHome = path === "/";
 
   projects.forEach((project) => {
     projectButtons.push(
@@ -24,12 +19,12 @@ function TopNavBar() {
   });
 
   return (
-    <div className={styles.main}>
-      <NavBar>
-        {!isHome && <button onClick={() => router.push("/")}>⌂</button>}
-        {projectButtons}
-      </NavBar>
-    </div>
+    <>
+      <HomeButton></HomeButton>
+      <div className={styles.container}>
+        <NavBar>{projectButtons}</NavBar>
+      </div>
+    </>
   );
 }
 

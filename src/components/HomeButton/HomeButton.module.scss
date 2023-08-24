@@ -1,0 +1,17 @@
+@use "../../globalVariables" as *;
+
+.button {
+  position: fixed;
+  top: 75px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: $foreground-rgb;
+  border: none;
+  border-radius: 50px;
+  z-index: 10;
+  transition: opacity 0.1s ease;
+}
