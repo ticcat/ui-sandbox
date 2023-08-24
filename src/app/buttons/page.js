@@ -9,7 +9,6 @@ export default function Home() {
       <Head>
         <title>Buttons</title>
       </Head>
-      <TopNavBar></TopNavBar>
       <main className={styles.main}>
         <h1>Buttons</h1>
       </main>

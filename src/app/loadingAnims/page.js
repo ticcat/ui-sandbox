@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>UI Sandbox</title>
       </Head>
-      <TopNavBar></TopNavBar>
       <main className={styles.main}>
         <h1>Loading animations</h1>
       </main>
