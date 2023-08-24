@@ -1,3 +1,4 @@
+import Head from "next/head";
 import NavBar from "@/components/NavBar/NavBar";
 import styles from "./styles/page.module.css";
 import NavBarButton from "@/components/NavBarButton/NavBarButton";
@@ -5,6 +6,9 @@ import NavBarButton from "@/components/NavBarButton/NavBarButton";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>UI Sandbox</title>
+      </Head>
       <NavBar>
         <NavBarButton>Test</NavBarButton>
         <NavBarButton>Test</NavBarButton>

@@ -10,6 +10,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: $font-general;
 }
 
 body {
@@ -19,4 +20,11 @@ body {
     $background-start-rgb,
     $background-end-rgb
   );
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-title;
 }

@@ -2,18 +2,17 @@
 @use "../../globalMixins" as *;
 
 .button {
-  @include colorWithAlpha(background-color, d-rgb, 0.8);
+  @include colorWithAlpha(background-color, $foreground-rgb, 0.8);
   height: 90%;
   width: max-content;
   min-width: 80px;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
   border: 1px solid $onForeground-rgb;
   color: $onForeground-rgb;
-  font-family: $font-mono;
+  font-family: $font-general;
   font-size: 18px;
-  transition: background-color 0.085s ease, color 0.085s ease,
-    transform 0.03s ease-in-out;
+  transition: all 0.15s ease 0s;
 
   &:hover {
     background-color: $onForeground-rgb;
@@ -21,9 +20,9 @@
   }
 
   &:active {
-    @include colorWithAlpha(background-color, $onForeground-rgb, 0.8);
     color: $foreground-rgb;
     border: none;
+    border-radius: 6px;
     transform: scale(0.95);
   }
 

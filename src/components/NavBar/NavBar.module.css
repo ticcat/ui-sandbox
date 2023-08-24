@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500;10..48,600&family=Noto+Sans&display=swap");
 .container {
   position: fixed;
   display: flex;
@@ -7,7 +9,7 @@
   padding: 10px 20px;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }/*# sourceMappingURL=NavBar.module.css.map */
