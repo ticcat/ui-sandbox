@@ -10,7 +10,7 @@ export default function Home() {
         <title>UI Sandbox</title>
       </Head>
       <NavBar>
-        <NavBarButton>Test</NavBarButton>
+        <NavBarButton href="/buttons">Test</NavBarButton>
         <NavBarButton>Test</NavBarButton>
         <NavBarButton>Test</NavBarButton>
         <NavBarButton>Test</NavBarButton>
