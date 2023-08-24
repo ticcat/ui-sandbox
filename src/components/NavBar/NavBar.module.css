@@ -7,15 +7,14 @@
   height: max-content;
   width: 100%;
   padding: 10px 20px;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .container {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */
