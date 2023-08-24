@@ -8,3 +8,19 @@
     $alpha
   );
 }
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin active() {
+  &:active {
+    @content;
+    transform: scale(0.95);
+  }
+}
+
+@mixin disabled() {
+}
