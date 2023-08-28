@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./styles/page.module.css";
-import TopNavBar from "../../components/TopNavBar/TopNavBar";
 
 export default function Home() {
   return (

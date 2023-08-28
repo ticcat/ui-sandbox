@@ -1,7 +1,5 @@
 import Head from "next/head";
 import styles from "./styles/page.module.css";
-import TopNavBar from "../../components/TopNavBar/TopNavBar";
-import { metadata } from "../layout";
 
 export default function Home() {
   return (
