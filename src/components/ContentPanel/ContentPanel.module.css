@@ -36,8 +36,7 @@
   border-radius: 12px;
 }
 .card .title {
-  align-self: flex-start;
-  margin-left: 2px;
+  align-self: center;
 }
 .card:hover {
   transform: scale(1.02);
