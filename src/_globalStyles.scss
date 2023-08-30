@@ -1,0 +1,13 @@
+@use "./globalVariables" as *;
+
+.navBar {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  background-color: $foreground-rgb;
+  color: $onForeground-rgb;
+}
