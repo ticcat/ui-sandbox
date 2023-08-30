@@ -1,9 +1,9 @@
 import styles from "./ContentPanel.module.css";
 
-function ContentPanel({ children }) {
+function ContentPanel() {
   return (
     <>
-      <h1 className={styles.title}>{children}</h1>
+      <h2 className={styles.title}>Content</h2>
     </>
   );
 }
