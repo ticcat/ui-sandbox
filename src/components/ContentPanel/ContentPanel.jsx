@@ -1,4 +1,20 @@
+"use client";
+
+import { useProjectStore } from "@/hooks/ProjectStore";
 import styles from "./ContentPanel.module.css";
+import { usePathname } from "next/navigation";
+
+const testProjects = [
+  <ContentCard key={1}>Test 1</ContentCard>,
+  <ContentCard key={2}>Test 2</ContentCard>,
+  <ContentCard key={3}>Test 3</ContentCard>,
+  <ContentCard key={4}>Test 4</ContentCard>,
+  <ContentCard key={5}>Test 5</ContentCard>,
+  <ContentCard key={1}>Test 1</ContentCard>,
+  <ContentCard key={2}>Test 2</ContentCard>,
+  <ContentCard key={3}>Test 3</ContentCard>,
+  <ContentCard key={4}>Test 4</ContentCard>,
+];
 
 function ContentCard({ children }) {
   return (
@@ -10,19 +26,18 @@ function ContentCard({ children }) {
 }
 
 function ContentPanel() {
-  const testProjects = [
-    <ContentCard key={1}>Button 1</ContentCard>,
-    <ContentCard key={2}>Button 2</ContentCard>,
-    <ContentCard key={3}>Button 3</ContentCard>,
-    <ContentCard key={4}>Button 4</ContentCard>,
-    <ContentCard key={5}>Button 5</ContentCard>,
-    <ContentCard key={1}>Button 1</ContentCard>,
-    <ContentCard key={2}>Button 2</ContentCard>,
-    <ContentCard key={3}>Button 3</ContentCard>,
-    <ContentCard key={4}>Button 4</ContentCard>,
-  ];
+  const getProjectByPath = useProjectStore((state) => state.getProjectByPath);
 
-  return <div className={styles.container}>{testProjects}</div>;
+  const path = usePathname();
+  const cases = getProjectByPath(path).cases.map((it) => (
+    <ContentCard key={it.id}>{it.name}</ContentCard>
+  ));
+
+  return (
+    <div className={styles.container}>
+      {cases.length === 0 ? testProjects : cases}
+    </div>
+  );
 }
 
 export default ContentPanel;

@@ -3,11 +3,11 @@
 import { useRouter } from "next/navigation";
 import styles from "./NavBarButton.module.css";
 
-function NavBarButton({ children, href }) {
+function NavBarButton({ children, href: path }) {
   const router = useRouter();
 
   function handleClick() {
-    router.push(href);
+    router.push(path);
   }
 
   return (

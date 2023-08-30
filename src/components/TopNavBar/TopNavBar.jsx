@@ -7,15 +7,11 @@ import { useProjectStore } from "@/hooks/ProjectStore";
 
 function TopNavBar() {
   const projects = useProjectStore((state) => state.projects);
-  const projectButtons = [];
-
-  projects.forEach((project) => {
-    projectButtons.push(
-      <NavBarButton key={project.id} href={project.href}>
-        {project.name}
-      </NavBarButton>
-    );
-  });
+  const projectButtons = projects.map((project) => (
+    <NavBarButton key={project.id} href={project.path}>
+      {project.name}
+    </NavBarButton>
+  ));
 
   return (
     <>
