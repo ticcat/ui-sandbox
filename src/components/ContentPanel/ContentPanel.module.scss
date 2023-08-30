@@ -1,6 +1,43 @@
 @use "../../globalVariables" as *;
+@use "../../globalMixins" as *;
 
-.title {
-  align-self: center;
-  justify-self: flex-start;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  min-width: 100%;
+  min-height: max-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-color: $foreground-rgb;
+  border-radius: $border-radius;
+  color: $onForeground-rgb;
+  user-select: none;
+  padding: 10px 20px;
+  transition: all 0.15s ease 0s;
+
+  .preview {
+    @include colorWithAlpha(background-color, $onForeground-rgb, 0.15);
+    width: 100%;
+    height: 80%;
+    margin: 8px;
+    border-radius: $border-radius;
+  }
+
+  @include hover {
+    transform: scale(1.02);
+  }
+
+  @include active {
+    transform: scale(0.98);
+  }
 }
