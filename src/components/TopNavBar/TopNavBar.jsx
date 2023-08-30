@@ -1,9 +1,8 @@
 "use client";
 
 import styles from "./TopNavBar.module.css";
-import NavBar from "@/components/NavBar/NavBar";
 import NavBarButton from "@/components/NavBarButton/NavBarButton";
-import HomeButton from "../../HomeButton/HomeButton";
+import HomeButton from "../HomeButton/HomeButton";
 import { useProjectStore } from "@/hooks/ProjectStore";
 
 function TopNavBar() {
@@ -21,9 +20,7 @@ function TopNavBar() {
   return (
     <>
       <HomeButton></HomeButton>
-      <div className={styles.container}>
-        <NavBar>{projectButtons}</NavBar>
-      </div>
+      <div className={styles.container}>{projectButtons}</div>
     </>
   );
 }
