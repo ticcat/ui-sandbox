@@ -1,10 +1,11 @@
 import styles from "./styles/page.module.css";
-import ContentPanel from "@/components/ContentPanel/ContentPanel";
 
 export default function Home() {
   return (
     <>
-      <main className={styles.main}></main>
+      <main className="main">
+        <h1>Main page</h1>
+      </main>
     </>
   );
 }
