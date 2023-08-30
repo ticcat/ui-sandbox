@@ -17,10 +17,11 @@
 
 @mixin active() {
   &:active {
-    @content;
     transform: scale(0.95);
+    @content;
   }
 }
 
 @mixin disabled() {
+  opacity: 0.75;
 }
