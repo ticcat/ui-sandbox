@@ -1,5 +1,4 @@
 import ContentPanel from "@/components/ContentPanel/ContentPanel";
-import styles from "./styles/page.module.css";
 
 export default function Home() {
   return (
