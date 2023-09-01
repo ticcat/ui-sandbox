@@ -1,0 +1,61 @@
+@use "../../../../globalMixins" as *;
+
+@font-face {
+  font-family: DIN Next;
+  src: url("../../../../../public/fonts/DINNextW1G-Regular.otf");
+}
+
+.buttonContainer {
+  background-color: rgba(104, 104, 104, 0.6);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  transition: all 0.5s;
+
+  .title {
+    position: relative;
+    width: 100%;
+    top: 2.5px;
+    font-family: "DIN Next", sans-serif;
+    font-size: 20px;
+    text-shadow: 0.5px 0.5px black;
+    color: white;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: relative;
+    height: 100%;
+    width: 5px;
+    background-image: conic-gradient(transparent 270deg, white 0),
+      conic-gradient(from 270deg, transparent 270deg, white 0);
+    background-size: 5px 5px;
+    background-position: top center, bottom center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: rgba(129, 117, 63, 0.6);
+    border: 3px solid rgb(255, 229, 164);
+
+    &::before,
+    &::after {
+      height: 90%;
+    }
+
+    &:before {
+      transform: translate(2px, 0px);
+    }
+
+    &::after {
+      transform: translate(-2px, 0px) rotate(180deg);
+    }
+  }
+}
