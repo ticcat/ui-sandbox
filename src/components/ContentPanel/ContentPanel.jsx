@@ -13,11 +13,11 @@ function NoContentScreen() {
   );
 }
 
-function ContentCard({ children }) {
+function ContentCard({ name, component }) {
   return (
     <div className={styles.card}>
-      <div className={styles.preview}></div>
-      <h2 className={styles.title}>{children}</h2>
+      <div className={styles.preview}>{component}</div>
+      <h2 className={styles.title}>{name}</h2>
     </div>
   );
 }
@@ -27,7 +27,11 @@ function ContentPanel() {
 
   const path = usePathname();
   const cases = getProjectByPath(path).cases.map((it) => (
-    <ContentCard key={it.id}>{it.name}</ContentCard>
+    <ContentCard
+      key={it.id}
+      name={it.name}
+      component={it.baseComponent}
+    ></ContentCard>
   ));
 
   if (cases.length === 0) {
