@@ -62,11 +62,11 @@
     align-self: center;
   }
 
-  @include hover {
-    transform: scale(1.02);
-  }
+  // @include hover {
+  //   transform: scale(1.02);
+  // }
 
-  @include active {
-    transform: scale(0.98);
-  }
+  // @include active {
+  //   transform: scale(0.98);
+  // }
 }
