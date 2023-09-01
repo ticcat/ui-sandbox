@@ -49,11 +49,9 @@
   transition: all 0.15s ease 0s;
 }
 .card .preview {
-  background-color: rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 80%;
+  height: 100%;
   margin: 8px;
-  border-radius: 12px;
 }
 .card .title {
   align-self: center;
