@@ -8,14 +8,8 @@ import styles from "./ContentPanel.module.css";
 function NoContentScreen() {
   return (
     <div className={styles.noCaseContainer}>
-      <p className={styles.title}>No study cases yet :(</p>
-      <Image
-        alt="Sad face"
-        src="/icons/sadFace.svg"
-        className={styles.sadFace}
-        width={100}
-        height={100}
-      ></Image>
+      <p className={styles.title}>No study cases yet</p>
+      <p className={styles.sadFace}>😔</p>
     </div>
   );
 }
