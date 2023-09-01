@@ -2,7 +2,6 @@
 
 import { useProjectStore } from "@/hooks/ProjectStore";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import styles from "./ContentPanel.module.css";
 
 function NoContentScreen() {
