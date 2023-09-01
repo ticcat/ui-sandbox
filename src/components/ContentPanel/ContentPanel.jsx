@@ -1,20 +1,24 @@
 "use client";
 
 import { useProjectStore } from "@/hooks/ProjectStore";
-import styles from "./ContentPanel.module.css";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import styles from "./ContentPanel.module.css";
 
-const testProjects = [
-  <ContentCard key={1}>Test 1</ContentCard>,
-  <ContentCard key={2}>Test 2</ContentCard>,
-  <ContentCard key={3}>Test 3</ContentCard>,
-  <ContentCard key={4}>Test 4</ContentCard>,
-  <ContentCard key={5}>Test 5</ContentCard>,
-  <ContentCard key={1}>Test 1</ContentCard>,
-  <ContentCard key={2}>Test 2</ContentCard>,
-  <ContentCard key={3}>Test 3</ContentCard>,
-  <ContentCard key={4}>Test 4</ContentCard>,
-];
+function NoContentScreen() {
+  return (
+    <div className={styles.noCaseContainer}>
+      <p className={styles.title}>No study cases yet :(</p>
+      <Image
+        alt="Sad face"
+        src="/icons/sadFace.svg"
+        className={styles.sadFace}
+        width={100}
+        height={100}
+      ></Image>
+    </div>
+  );
+}
 
 function ContentCard({ children }) {
   return (
@@ -33,11 +37,11 @@ function ContentPanel() {
     <ContentCard key={it.id}>{it.name}</ContentCard>
   ));
 
-  return (
-    <div className={styles.container}>
-      {cases.length === 0 ? testProjects : cases}
-    </div>
-  );
+  if (cases.length === 0) {
+    return <NoContentScreen></NoContentScreen>;
+  } else {
+    return <div className={styles.container}> {cases} </div>;
+  }
 }
 
 export default ContentPanel;
