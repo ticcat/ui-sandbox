@@ -1,9 +1,9 @@
 import style from "./ValorantButton.module.css";
 
-function ValorantButton() {
+function ValorantButton({ children }) {
   return (
     <div className={style.buttonContainer}>
-      <p className={style.title}>PLAY</p>
+      <p className={style.title}>{children ? children : "PLAY"}</p>
     </div>
   );
 }
