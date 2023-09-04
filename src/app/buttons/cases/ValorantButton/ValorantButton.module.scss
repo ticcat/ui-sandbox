@@ -1,8 +1,17 @@
+@use "../../../../globalVariables" as *;
 @use "../../../../globalMixins" as *;
 
 @font-face {
   font-family: DIN Next;
   src: url("../../../../../public/fonts/DINNextW1G-Regular.otf");
+}
+
+.background {
+  background-color: rgb(68, 56, 83);
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+  padding: 10px;
 }
 
 .buttonContainer {
