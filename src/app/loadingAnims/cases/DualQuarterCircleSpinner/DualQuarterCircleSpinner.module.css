@@ -1,0 +1,19 @@
+.container {
+  border-radius: 100px;
+}
+.container .spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid;
+  border-color: black transparent black transparent;
+  border-radius: 50%;
+  animation: spin 1s infinite cubic-bezier(0.61, 0.19, 0.27, 1);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=DualQuarterCircleSpinner.module.css.map */
