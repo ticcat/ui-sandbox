@@ -7,7 +7,10 @@
     border: 10px solid;
     border-color: black transparent black transparent;
     border-radius: 50%;
-    animation: spin 1s infinite cubic-bezier(0.61, 0.19, 0.27, 1);
+
+    &:hover {
+      animation: spin 1s infinite cubic-bezier(0.61, 0.19, 0.27, 1);
+    }
   }
 
   @keyframes spin {
