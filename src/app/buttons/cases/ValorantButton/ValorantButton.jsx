@@ -1,6 +1,6 @@
 import style from "./ValorantButton.module.css";
 
-function ValorantButton({ children }) {
+export default function ValorantButton({ children }) {
   return (
     <div className={style.background}>
       <div className={style.buttonContainer}>
@@ -10,5 +10,3 @@ function ValorantButton({ children }) {
     </div>
   );
 }
-
-export default ValorantButton;
