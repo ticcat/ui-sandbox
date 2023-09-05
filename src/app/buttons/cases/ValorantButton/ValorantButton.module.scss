@@ -1,10 +1,6 @@
+@import "../../../../../public/fonts/fonts.css";
 @use "../../../../globalVariables" as *;
 @use "../../../../globalMixins" as *;
-
-@font-face {
-  font-family: DIN Next;
-  src: url("../../../../../public/fonts/DINNextW1G-Regular.otf");
-}
 
 $transition-duration: 0.35s;
 
@@ -38,7 +34,7 @@ $transition-duration: 0.35s;
     width: 98%;
     height: 92%;
     border: 1px solid rgba(180, 180, 180, 0.486);
-    font-family: "DIN Next", sans-serif;
+    font-family: "DIN Next";
     font-size: 20px;
     text-shadow: 0.5px 0.5px black;
     color: white;
