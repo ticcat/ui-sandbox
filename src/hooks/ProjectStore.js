@@ -2,11 +2,12 @@ import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/loadingAnims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
 import { create } from "zustand";
 
-function Project(id, name, path, cases) {
+function Project(id, name, path, isFullPage, cases) {
   return {
     id: id,
     name: name,
     path: path,
+    isFullPage: isFullPage,
     cases: cases,
   };
 }
@@ -20,14 +21,14 @@ function ProjectCase(id, name, baseComponent) {
 }
 
 const projectsList = [
-  Project("buttons", "Buttons", "/buttons", [
+  Project("buttons", "Buttons", "/buttons", false, [
     ProjectCase(
       "valorantButton",
       "Valorant button",
       <ValorantButton></ValorantButton>
     ),
   ]),
-  Project("loadingAnims", "Loading Animations", "/loadingAnims", [
+  Project("loadingAnims", "Loading Animations", "/loadingAnims", false, [
     ProjectCase(
       "dualQuarterCircleSpinner",
       "Dual spinner",
