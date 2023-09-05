@@ -14,7 +14,7 @@ function ContentCard({ name, component }) {
   );
 }
 
-function ContentPanel() {
+export default function ContentPanel() {
   const getProjectByPath = useProjectStore((state) => state.getProjectByPath);
 
   const path = usePathname();
@@ -32,5 +32,3 @@ function ContentPanel() {
     return <div className={style.container}> {cases} </div>;
   }
 }
-
-export default ContentPanel;

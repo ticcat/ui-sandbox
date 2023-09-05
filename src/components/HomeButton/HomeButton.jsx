@@ -5,7 +5,7 @@ import styles from "./HomeButton.module.css";
 
 import Image from "next/image";
 
-function HomeButton() {
+export default function HomeButton() {
   const path = usePathname();
   const router = useRouter();
   const isHome = path === "/";
@@ -27,5 +27,3 @@ function HomeButton() {
     </button>
   );
 }
-
-export default HomeButton;

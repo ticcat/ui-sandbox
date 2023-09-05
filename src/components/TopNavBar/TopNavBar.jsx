@@ -6,7 +6,7 @@ import HomeButton from "../HomeButton/HomeButton";
 import { useProjectStore } from "@/hooks/ProjectStore";
 import { useRouter } from "next/navigation";
 
-function TopNavBar() {
+export default function TopNavBar() {
   const router = useRouter();
 
   const projects = useProjectStore((state) => state.projects);
@@ -30,5 +30,3 @@ function TopNavBar() {
     </>
   );
 }
-
-export default TopNavBar;
