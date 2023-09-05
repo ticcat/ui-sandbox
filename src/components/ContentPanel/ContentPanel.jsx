@@ -2,22 +2,14 @@
 
 import { useProjectStore } from "@/hooks/ProjectStore";
 import { usePathname } from "next/navigation";
-import styles from "./ContentPanel.module.css";
-
-function NoContentScreen() {
-  return (
-    <div className={styles.noCaseContainer}>
-      <p className={styles.title}>No study cases yet</p>
-      <p className={styles.sadFace}>😔</p>
-    </div>
-  );
-}
+import NoContentScreen from "../NoContentScreen/NoContentScreen";
+import style from "./ContentPanel.module.css";
 
 function ContentCard({ name, component }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.preview}>{component}</div>
-      <h2 className={styles.title}>{name}</h2>
+    <div className={style.card}>
+      <div className={style.preview}>{component}</div>
+      <h2 className={style.title}>{name}</h2>
     </div>
   );
 }
@@ -37,7 +29,7 @@ function ContentPanel() {
   if (cases.length === 0) {
     return <NoContentScreen></NoContentScreen>;
   } else {
-    return <div className={styles.container}> {cases} </div>;
+    return <div className={style.container}> {cases} </div>;
   }
 }
 
