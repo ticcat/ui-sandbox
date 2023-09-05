@@ -28,11 +28,6 @@ export default function TopNavBar() {
           iconName="homeIcon"
           onClickHandler={() => router.push("/")}
         ></ShowableButton>
-        <ShowableButton
-          show={path === "/"}
-          iconName="sadFace"
-          onClickHandler={() => router.push("/")}
-        ></ShowableButton>
       </div>
       <div className={style.container}>{projectButtons}</div>
     </>
