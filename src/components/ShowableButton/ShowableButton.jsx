@@ -1,18 +1,17 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import styles from "./HomeButton.module.css";
+import styles from "./ShowableButton.module.css";
 
 import Image from "next/image";
 
-export default function HomeButton({ iconName, onClickHandler }) {
+export default function ShowableButton({ show, iconName, onClickHandler }) {
   // TODO: Add appear condition to props and rename to HiddeblebeButton
   const path = usePathname();
-  const isHome = path === "/";
 
   return (
     <button
-      style={!isHome ? { opacity: 1 } : { opacity: 0 }}
+      style={!show ? { opacity: 1 } : { opacity: 0 }}
       className={styles.button}
       onClick={() => onClickHandler()}
     >

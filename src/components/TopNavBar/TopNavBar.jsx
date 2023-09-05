@@ -2,12 +2,13 @@
 
 import style from "./TopNavBar.module.css";
 import NavBarButton from "@/components/AppButton/AppButton";
-import HomeButton from "../HomeButton/HomeButton";
+import ShowableButton from "../ShowableButton/ShowableButton";
 import { useProjectStore } from "@/hooks/ProjectStore";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function TopNavBar() {
   const router = useRouter();
+  const path = usePathname();
 
   const projects = useProjectStore((state) => state.projects);
   const projectButtons = projects.map((project) => (
@@ -22,14 +23,16 @@ export default function TopNavBar() {
   return (
     <>
       <div className={style.floatingContainer}>
-        <HomeButton
+        <ShowableButton
+          show={path === "/"}
           iconName="homeIcon"
           onClickHandler={() => router.push("/")}
-        ></HomeButton>
-        <HomeButton
+        ></ShowableButton>
+        <ShowableButton
+          show={path === "/"}
           iconName="sadFace"
           onClickHandler={() => router.push("/")}
-        ></HomeButton>
+        ></ShowableButton>
       </div>
       <div className={style.container}>{projectButtons}</div>
     </>
