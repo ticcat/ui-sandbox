@@ -1,5 +1,6 @@
 .container {
-  border-radius: 100px;
+  height: 100%;
+  width: 100%;
 }
 .container .spinner {
   width: 100px;
@@ -8,7 +9,7 @@
   border-color: black transparent black transparent;
   border-radius: 50%;
 }
-.container .spinner:hover {
+.container:hover .spinner {
   animation: spin 1s infinite cubic-bezier(0.61, 0.19, 0.27, 1);
 }
 @keyframes spin {
