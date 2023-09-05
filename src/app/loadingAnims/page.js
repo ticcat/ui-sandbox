@@ -1,6 +1,6 @@
 import ContentPanel from "@/components/ContentPanel/ContentPanel";
 
-export default function Home() {
+export default function LoadingAnims() {
   return (
     <>
       <main className="main">
