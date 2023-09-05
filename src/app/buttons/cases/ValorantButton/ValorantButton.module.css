@@ -26,7 +26,6 @@
   transition: opacity 0.35s linear;
 }
 .buttonContainer .title {
-  top: 2.5px;
   width: 98%;
   height: 92%;
   border: 1px solid rgba(180, 180, 180, 0.486);
@@ -34,6 +33,11 @@
   font-size: 20px;
   text-shadow: 0.5px 0.5px black;
   color: white;
+}
+.buttonContainer .title p {
+  position: relative;
+  display: block;
+  top: 2px;
 }
 .buttonContainer::before, .buttonContainer::after {
   content: "";
