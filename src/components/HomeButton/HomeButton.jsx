@@ -1,26 +1,24 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import styles from "./HomeButton.module.css";
 
 import Image from "next/image";
 
-export default function HomeButton() {
+export default function HomeButton({ iconName, onClickHandler }) {
+  // TODO: Add appear condition to props and rename to HiddeblebeButton
   const path = usePathname();
-  const router = useRouter();
   const isHome = path === "/";
 
   return (
     <button
       style={!isHome ? { opacity: 1 } : { opacity: 0 }}
       className={styles.button}
-      onClick={() => {
-        router.push("/");
-      }}
+      onClick={() => onClickHandler()}
     >
       <Image
-        alt="Home button"
-        src="/icons/homeIcon.svg"
+        alt={{ iconName } + " button"}
+        src={"/icons/" + iconName + ".svg"}
         width={30}
         height={30}
       ></Image>

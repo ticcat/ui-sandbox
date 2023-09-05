@@ -2,9 +2,6 @@
 @use "../../globalMixins" as *;
 
 .button {
-  position: fixed;
-  top: 75px;
-  left: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
