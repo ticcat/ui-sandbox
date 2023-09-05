@@ -27,7 +27,7 @@ function ContentPanel() {
   ));
 
   if (cases.length === 0) {
-    return <NoContentScreen>No study cases yet</NoContentScreen>;
+    return <NoContentScreen title="No study cases yet"></NoContentScreen>;
   } else {
     return <div className={style.container}> {cases} </div>;
   }
