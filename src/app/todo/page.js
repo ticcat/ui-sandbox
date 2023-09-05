@@ -1,3 +1,7 @@
 export default function Todo() {
-  return <h1>TODO App</h1>;
+  return (
+    <main className="main">
+      <h1>Todo app</h1>
+    </main>
+  );
 }
