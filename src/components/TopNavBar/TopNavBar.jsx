@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./TopNavBar.module.css";
+import style from "./TopNavBar.module.css";
 import NavBarButton from "@/components/AppButton/AppButton";
 import HomeButton from "../HomeButton/HomeButton";
 import { useProjectStore } from "@/hooks/ProjectStore";
@@ -13,20 +13,25 @@ export default function TopNavBar() {
   const projectButtons = projects.map((project) => (
     <NavBarButton
       key={project.id}
-      onClickHandler={() => handleClick(project.path)}
+      onClickHandler={() => router.push(project.path)}
     >
       {project.name}
     </NavBarButton>
   ));
 
-  function handleClick(path) {
-    router.push(path);
-  }
-
   return (
     <>
-      <HomeButton></HomeButton>
-      <div className={styles.container}>{projectButtons}</div>
+      <div className={style.floatingContainer}>
+        <HomeButton
+          iconName="homeIcon"
+          onClickHandler={() => router.push("/")}
+        ></HomeButton>
+        <HomeButton
+          iconName="sadFace"
+          onClickHandler={() => router.push("/")}
+        ></HomeButton>
+      </div>
+      <div className={style.container}>{projectButtons}</div>
     </>
   );
 }

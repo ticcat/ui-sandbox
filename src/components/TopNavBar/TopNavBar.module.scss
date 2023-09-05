@@ -1,5 +1,13 @@
 @use "../../globalStyles" as *;
 
+.floatingContainer {
+  position: fixed;
+  display: flex;
+  gap: 1rem;
+  top: 75px;
+  left: 25px;
+}
+
 .container {
   @extend .navBar;
   position: sticky;
