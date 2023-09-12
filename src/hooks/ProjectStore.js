@@ -1,5 +1,6 @@
 import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/loadingAnims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
+import HBOLoader from "@/app/loadingAnims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
 
 function Project(id, name, path, cases) {
@@ -33,6 +34,7 @@ const projectsList = [
       "Dual spinner",
       <DualQuarterCircleSpinner></DualQuarterCircleSpinner>
     ),
+    ProjectCase("hboLoader", "HBO loader", <HBOLoader></HBOLoader>),
   ]),
   Project("todoApp", "Todo app", "/todo"),
 ];
