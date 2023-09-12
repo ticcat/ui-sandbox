@@ -1,0 +1,70 @@
+@use "../../../../globalVariables" as *;
+
+@mixin animationWithDelay {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      opacity: 0;
+      animation: dotTranslation
+        2.5s
+        #{$i *
+        0.83s}
+        cubic-bezier(0.49, 0, 0.5, 0.99)
+        infinite;
+    }
+  }
+}
+
+.background {
+  background-image: linear-gradient(-45deg, black, purple);
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+}
+
+.dotContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  .dot {
+    @include animationWithDelay();
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+
+    &:nth-child(1) {
+      transform: translateX(-300%);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(300%);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @keyframes dotTranslation {
+    0% {
+      transform: translateX(-300%);
+      opacity: 0;
+    }
+    25% {
+      transform: translateX(-300%);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(300%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(300%);
+      opacity: 0;
+    }
+  }
+}
