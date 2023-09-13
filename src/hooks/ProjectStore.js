@@ -1,3 +1,4 @@
+import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguerButton/StickyBubbleBurguerButtton";
 import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/loadingAnims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
 import HBOLoader from "@/app/loadingAnims/cases/HBOLoader/HBOLoader";
@@ -27,6 +28,11 @@ const projectsList = [
       "Valorant button",
       <ValorantButton></ValorantButton>
     ),
+    ProjectCase(
+      "stickyBubbleBurguerButton",
+      "Dennis burguer button",
+      <StickyBubbleBurguerButton></StickyBubbleBurguerButton>
+    ),
   ]),
   Project("loadingAnims", "Loading animations", "/loadingAnims", [
     ProjectCase(
@@ -39,7 +45,7 @@ const projectsList = [
   Project("todoApp", "Todo app", "/todo"),
 ];
 
-export const useProjectStore = create((set) => ({
+export const useProjectStore = create((_) => ({
   projects: projectsList,
   getProjectByPath: (path) => {
     return projectsList.find((it) => it.path === path);
