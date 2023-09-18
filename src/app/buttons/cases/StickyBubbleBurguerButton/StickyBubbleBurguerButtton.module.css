@@ -1,1 +1,73 @@
-/*# sourceMappingURL=StickyBubbleBurguerButtton.module.css.map */
+.button {
+  position: relative;
+  width: clamp(6rem, 6.5vw, 7rem);
+  height: clamp(6rem, 6.5vw, 7rem);
+  border-radius: 50%;
+  background-color: #1c1d20;
+  overflow: hidden;
+  box-shadow: none;
+}
+.button .fill {
+  position: absolute;
+  height: 200%;
+  width: 150%;
+  border-radius: 50%;
+  background-color: #455ce9;
+  will-change: transform;
+  transform: translateY(0);
+}
+.button .text {
+  position: relative;
+  width: clamp(2.5rem, 3vw, 3.5rem);
+  height: calc(clamp(2.5rem, 3vw, 3.5rem) / 5);
+}
+.button .text .burguerLines {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.button .text .burguerLines::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: rotate(0deg);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.button .text .burguerLines::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: rotate(0deg);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.button .text .burguerLinesActive {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.button .text .burguerLinesActive::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.button .text .burguerLinesActive::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: rotate(-45deg);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+}/*# sourceMappingURL=StickyBubbleBurguerButtton.module.css.map */
