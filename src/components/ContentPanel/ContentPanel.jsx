@@ -14,7 +14,7 @@ function ContentCard({ name, component }) {
   );
 }
 
-export default function ContentPanel() {
+export default function ProjectsPanel() {
   const getProjectByPath = useProjectStore((state) => state.getProjectByPath);
 
   const path = usePathname();
