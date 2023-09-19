@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
-const isGitHubActions = process.env.GITHUB_ACTIONS || false;
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
 let assetPrefix = "";
 let basePatch = "/";
 
-if (isGitHubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  assetPrefix = `/${repo}/`;
-  basePatch = `/${repo}`;
+if (isGithubActions) {
+  assetPrefix = "/ui-sandbox/";
+  basePatch = "/ui-sandbox";
 }
 
 const nextConfig = {
