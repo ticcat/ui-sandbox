@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url("/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+  src: url("./BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
 }
 
 @font-face {
   font-family: "DIN Next";
-  src: url("/fonts/DINNextW1G-Regular.otf");
+  src: url("./DINNextW1G-Regular.otf");
 }

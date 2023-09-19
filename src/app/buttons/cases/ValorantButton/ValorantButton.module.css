@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import "../../../lib/fonts/fonts.css";
+@import "../../../../../fonts/fonts.css";
 .background {
   background-color: rgb(68, 56, 83);
   width: 100%;
