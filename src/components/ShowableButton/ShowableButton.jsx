@@ -17,7 +17,7 @@ export default function ShowableButton({ show, iconName, onClickHandler }) {
     >
       <Image
         alt={iconName + " button"}
-        src={"/" + iconName + ".svg"}
+        src={"/src/icons/" + iconName + ".svg"}
         width={30}
         height={30}
       ></Image>
