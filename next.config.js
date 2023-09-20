@@ -5,8 +5,8 @@ let basePatch = "";
 
 if (isGithubActions) {
   const repo = process.env.REPO_NAME;
-  assetPrefix = `ui/${repo}/`;
-  basePatch = `ui/${repo}`;
+  assetPrefix = `/${repo}/`;
+  basePatch = `/${repo}`;
 }
 
 const nextConfig = {
