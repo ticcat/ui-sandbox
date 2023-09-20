@@ -6,6 +6,10 @@ export function useRepo() {
 
   if (isGithubActions && repo === "") {
     setRepo(process.env.REPO_NAME);
+    console.log(
+      "==================== REPO NAME ====================" +
+        process.env.REPO_NAME
+    );
   }
 
   return repo;
