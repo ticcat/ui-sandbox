@@ -4,7 +4,7 @@ export function useRepo() {
   const [repo, setRepo] = useState("");
   const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
-  if (isGithubActions) {
+  if (isGithubActions && repo === "") {
     setRepo(process.env.REPO_NAME);
   }
 
