@@ -4,7 +4,7 @@ let assetPrefix = "/";
 let basePatch = "";
 
 if (isGithubActions) {
-  const repo = process.env.CODESPACE_NAME;
+  const repo = process.env.GITHUB_REPOSITORY;
   assetPrefix = `/${repo}/`;
   basePatch = `/${repo}`;
 }
