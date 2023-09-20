@@ -4,10 +4,11 @@ import { usePathname } from "next/navigation";
 import styles from "./ShowableButton.module.css";
 
 import Image from "next/image";
+import { useRepo } from "@/hooks/RepoHooks";
 
 export default function ShowableButton({ show, iconName, onClickHandler }) {
   // TODO: Add appear condition to props and rename to HiddeblebeButton
-  const path = usePathname();
+  const repoName = useRepo();
 
   return (
     <button
@@ -17,7 +18,7 @@ export default function ShowableButton({ show, iconName, onClickHandler }) {
     >
       <Image
         alt={iconName + " button"}
-        src={"/icons/" + iconName + ".svg"}
+        src={repoName + "/icons/" + iconName + ".svg"}
         width={30}
         height={30}
       ></Image>
