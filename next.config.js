@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = "/ui-sandbox/";
-let basePatch = "/ui-sandbox";
+let assetPrefix = "/";
+let basePatch = "";
 
 if (isGithubActions) {
-  assetPrefix = "/ui-sandbox/";
-  basePatch = "/ui-sandbox";
+  const repo = process.env.REPO_NAME;
+  assetPrefix = `ui/${repo}/`;
+  basePatch = `ui/${repo}`;
 }
 
 const nextConfig = {
