@@ -5,10 +5,10 @@ export function useRepo() {
   const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
   if (isGithubActions && repo === "") {
-    setRepo(process.vars.REPO_NAME);
+    setRepo(process.env.CODESPACE_NAME);
     console.log(
       "==================== REPO NAME ====================" +
-        process.vars.REPO_NAME
+        process.env.CODESPACE_NAME
     );
   }
 
