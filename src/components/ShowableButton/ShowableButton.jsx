@@ -1,5 +1,6 @@
-import styles from "./ShowableButton.module.css";
+"use client";
 
+import styles from "./ShowableButton.module.css";
 import Image from "next/image";
 
 export default function ShowableButton({ show, iconName, onClickHandler }) {
