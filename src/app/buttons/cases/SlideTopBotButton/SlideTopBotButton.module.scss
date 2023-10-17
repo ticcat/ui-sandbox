@@ -1,0 +1,46 @@
+@use "../../../../globalVariables" as *;
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+
+  .container {
+    position: relative;
+    width: 100%;
+    color: black;
+    clip-path: inset(0 0 0 0);
+    transition: color 0.2s ease-out;
+
+    .text {
+      font-family: "Space Grotesk";
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 0.8;
+      letter-spacing: -1px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      will-change: transform;
+      transition: transform 0.4s cubic-bezier(0.92, 0, 0.15, 1);
+    }
+
+    .bottomText {
+      position: absolute;
+      transform: translateY(100%);
+    }
+
+    &:hover {
+      color: $foreground-highlight-rgb;
+
+      .text {
+        transform: translateY(-100%);
+      }
+      .bottomText {
+        transform: translateY(0);
+      }
+    }
+  }
+}

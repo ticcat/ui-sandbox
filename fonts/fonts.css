@@ -12,3 +12,8 @@
   font-family: "DIN Next";
   src: url("./DINNextW1G-Regular.otf");
 }
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./SpaceGrotesk-VariableFont_wght.ttf");
+}
