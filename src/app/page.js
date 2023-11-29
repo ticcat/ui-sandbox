@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <main className="main">
         <div className={styles.container}>
-          <h1>Main page</h1>
+          <h1>Hello there 👋</h1>
         </div>
       </main>
     </>
