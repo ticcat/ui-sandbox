@@ -37,3 +37,9 @@ h4 {
   gap: 3rem;
   margin: 2rem 1rem;
 }
+
+.main-container {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  height: 100%;
+}
