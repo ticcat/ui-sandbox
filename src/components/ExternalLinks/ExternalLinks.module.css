@@ -1,0 +1,25 @@
+@import "/fonts/fonts.css";
+.container {
+  position: absolute;
+  bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.container .link {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  font-family: "Noto Sans";
+  font-size: 18px;
+}/*# sourceMappingURL=ExternalLinks.module.css.map */

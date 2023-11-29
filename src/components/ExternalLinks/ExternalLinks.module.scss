@@ -1,0 +1,20 @@
+@use "../../globalVariables" as *;
+@use "../../globalMixins" as *;
+
+.container {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+
+  .link {
+    text-decoration: underline;
+    color: $foreground-rgb;
+    font-family: $font-general;
+    font-size: 18px;
+  }
+}
