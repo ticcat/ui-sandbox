@@ -1,4 +1,5 @@
 import TopNavBar from "@/components/TopNavBar/TopNavBar";
+import ExternalLinks from "@/components/ExternalLinks/ExternalLinks";
 import "./styles/globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <TopNavBar></TopNavBar>
         {children}
+        <ExternalLinks></ExternalLinks>
       </body>
     </html>
   );
