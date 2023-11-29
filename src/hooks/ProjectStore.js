@@ -42,7 +42,6 @@ const projectsList = [
     ),
     ProjectCase("hboLoader", "HBO loader", <HBOLoader></HBOLoader>),
   ]),
-  Project("todoApp", "Todo app", "/todo"),
 ];
 
 export const useProjectStore = create((_) => ({
