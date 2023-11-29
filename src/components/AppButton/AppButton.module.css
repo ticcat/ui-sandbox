@@ -11,6 +11,7 @@
   font-size: 18px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  -webkit-transition: all 0.15s ease 0s;
   transition: all 0.15s ease 0s;
 }
 .button:hover {
@@ -18,7 +19,8 @@
   color: rgb(255, 255, 255);
 }
 .button:active {
-  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 6px;

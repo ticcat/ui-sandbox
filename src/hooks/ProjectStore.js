@@ -1,3 +1,4 @@
+import SlideTopBotButton from "@/app/buttons/cases/SlideTopBotButton/SlideTopBotButton";
 import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguerButton/StickyBubbleBurguerButtton";
 import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/loadingAnims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
@@ -32,6 +33,11 @@ const projectsList = [
       "stickyBubbleBurguerButton",
       "Dennis burguer button",
       <StickyBubbleBurguerButton></StickyBubbleBurguerButton>
+    ),
+    ProjectCase(
+      "slideTopBotButton",
+      "Slide top bot button",
+      <SlideTopBotButton></SlideTopBotButton>
     ),
   ]),
   Project("loadingAnims", "Loading animations", "/loadingAnims", [

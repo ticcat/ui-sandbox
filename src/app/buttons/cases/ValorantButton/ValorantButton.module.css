@@ -14,6 +14,7 @@
   width: 200px;
   height: 50px;
   text-align: center;
+  -webkit-transition: background-color 0.35s linear;
   transition: background-color 0.35s linear;
 }
 .buttonContainer .border {
@@ -22,6 +23,7 @@
   height: 100%;
   border: 3px solid rgb(255, 229, 164);
   opacity: 0;
+  -webkit-transition: opacity 0.35s linear;
   transition: opacity 0.35s linear;
 }
 .buttonContainer .title {
@@ -47,11 +49,13 @@
   background-size: 4px 4px;
   background-position: top center, bottom center;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
 .buttonContainer::after {
   right: 0;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .buttonContainer::before {
   left: 0;
@@ -66,8 +70,10 @@
   height: 80%;
 }
 .buttonContainer:hover:before {
-  transform: translate(5px, 0px);
+  -webkit-transform: translate(5px, 0px);
+          transform: translate(5px, 0px);
 }
 .buttonContainer:hover::after {
-  transform: translate(-5px, 0px) rotate(180deg);
+  -webkit-transform: translate(-5px, 0px) rotate(180deg);
+          transform: translate(-5px, 0px) rotate(180deg);
 }/*# sourceMappingURL=ValorantButton.module.css.map */
