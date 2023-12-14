@@ -1,3 +1,4 @@
+import RenxaMenuButton from "@/app/buttons/cases/RenxaMenuButton/RenxaMenuButton";
 import SlideTopBotButton from "@/app/buttons/cases/SlideTopBotButton/SlideTopBotButton";
 import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguerButton/StickyBubbleBurguerButtton";
 import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
@@ -38,6 +39,11 @@ const projectsList = [
       "slideTopBotButton",
       "Slide top bot button",
       <SlideTopBotButton></SlideTopBotButton>
+    ),
+    ProjectCase(
+      "renxaMenuButton",
+      "Renxa menu button",
+      <RenxaMenuButton></RenxaMenuButton>
     ),
   ]),
   Project("loadingAnims", "Loading animations", "/loadingAnims", [
