@@ -1,3 +1,73 @@
-.title {
-  color: black;
+.buttonContainer {
+  position: relative;
+  width: clamp(6rem, 6.5vw, 7rem);
+  height: clamp(6rem, 6.5vw, 7rem);
+}
+.buttonContainer .text, .buttonContainer .menuText,
+.buttonContainer .closeText {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-family: "Figtree", "sans";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+  z-index: 1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s ease, -webkit-clip-path 0.5s ease;
+  transition: -webkit-transform 0.5s ease, -webkit-clip-path 0.5s ease;
+  transition: transform 0.5s ease, clip-path 0.5s ease;
+  transition: transform 0.5s ease, clip-path 0.5s ease, -webkit-transform 0.5s ease, -webkit-clip-path 0.5s ease;
+  pointer-events: none;
+}
+.buttonContainer .menuText.open {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-clip-path: inset(100% 0 0 0);
+          clip-path: inset(100% 0 0 0);
+}
+.buttonContainer .menuText.closed {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+.buttonContainer .closeText.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+.buttonContainer .closeText.closed {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-clip-path: inset(0 0 100% 0);
+          clip-path: inset(0 0 100% 0);
+}
+.buttonContainer .buttonCover {
+  width: inherit;
+  height: inherit;
+  background-color: #003973;
+  border-radius: 50%;
+  will-change: transform;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.buttonContainer .buttonCover:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }/*# sourceMappingURL=RenxaMenuButton.module.css.map */

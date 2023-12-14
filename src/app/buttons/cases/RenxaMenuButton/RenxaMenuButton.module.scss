@@ -1,3 +1,69 @@
-.title {
-  color: black;
+$btn-size: clamp(6rem, 6.5vw, 7rem);
+
+.buttonContainer {
+  position: relative;
+  width: $btn-size;
+  height: $btn-size;
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    font-family: "Figtree", "sans";
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, clip-path 0.5s ease;
+    pointer-events: none;
+  }
+
+  .menuText,
+  .closeText {
+    @extend .text;
+  }
+
+  .menuText {
+    &.open {
+      transform: translateY(-100%);
+      clip-path: inset(100% 0 0 0);
+    }
+
+    &.closed {
+      transform: translateY(0);
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .closeText {
+    &.open {
+      transform: translateY(0);
+      clip-path: inset(0 0 0 0);
+    }
+
+    &.closed {
+      transform: translateY(100%);
+      clip-path: inset(0 0 100% 0);
+    }
+  }
+
+  .buttonCover {
+    width: inherit;
+    height: inherit;
+    background-color: #003973;
+    border-radius: 50%;
+    will-change: transform;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
