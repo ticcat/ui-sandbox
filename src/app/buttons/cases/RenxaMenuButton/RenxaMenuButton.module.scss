@@ -30,6 +30,12 @@ $btn-size: clamp(6rem, 6.5vw, 7rem);
   }
 
   .menuText {
+    @for $i from 0 to 4 {
+      & span:nth-child(#{$i + 1}) {
+        animation-delay: #{$i * 0.05s} !important;
+      }
+    }
+
     &.open {
       transform: translateY(-100%);
       clip-path: inset(100% 0 0 0);
@@ -42,6 +48,12 @@ $btn-size: clamp(6rem, 6.5vw, 7rem);
   }
 
   .closeText {
+    @for $i from 0 to 5 {
+      & span:nth-child(#{$i + 1}) {
+        animation-delay: #{$i * 0.05s} !important;
+      }
+    }
+
     &.open {
       transform: translateY(0);
       clip-path: inset(0 0 0 0);
@@ -61,9 +73,31 @@ $btn-size: clamp(6rem, 6.5vw, 7rem);
     will-change: transform;
     transform: scale(1);
     transition: transform 0.5s ease;
+  }
 
-    &:hover {
+  &:hover {
+    .menuText,
+    .closeText {
+      & span {
+        animation: letterWave 0.65s ease;
+      }
+    }
+
+    .buttonCover {
       transform: scale(1.2);
+    }
+  }
+
+  @keyframes letterWave {
+    0% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.1;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
 }
