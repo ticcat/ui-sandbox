@@ -2,8 +2,8 @@ import RenxaMenuButton from "@/app/buttons/cases/RenxaMenuButton/RenxaMenuButton
 import SlideTopBotButton from "@/app/buttons/cases/SlideTopBotButton/SlideTopBotButton";
 import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguerButton/StickyBubbleBurguerButtton";
 import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
-import DualQuarterCircleSpinner from "@/app/loadingAnims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
-import HBOLoader from "@/app/loadingAnims/cases/HBOLoader/HBOLoader";
+import DualQuarterCircleSpinner from "@/app/anims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
+import HBOLoader from "@/app/anims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
 
 function Project(id, name, path, cases) {
@@ -46,7 +46,7 @@ const projectsList = [
       <RenxaMenuButton></RenxaMenuButton>
     ),
   ]),
-  Project("loadingAnims", "Loading animations", "/loadingAnims", [
+  Project("anims", "Animations", "/anims", [
     ProjectCase(
       "dualQuarterCircleSpinner",
       "Dual spinner",

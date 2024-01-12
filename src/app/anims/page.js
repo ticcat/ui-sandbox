@@ -1,6 +1,6 @@
 import ProjectsPanel from "@/components/ContentPanel/ContentPanel";
 
-export default function LoadingAnims() {
+export default function Anims() {
   return (
     <>
       <main className="main">
