@@ -5,6 +5,7 @@ import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/anims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
 import HBOLoader from "@/app/anims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
+import RotatingGlobe from "@/app/anims/cases/RotatingGlobe/RotatingGlobe";
 
 function Project(id, name, path, cases) {
   return {
@@ -53,6 +54,11 @@ const projectsList = [
       <DualQuarterCircleSpinner></DualQuarterCircleSpinner>
     ),
     ProjectCase("hboLoader", "HBO loader", <HBOLoader></HBOLoader>),
+    ProjectCase(
+      "rotatingGlobe",
+      "Rotating globe",
+      <RotatingGlobe></RotatingGlobe>
+    ),
   ]),
 ];
 
