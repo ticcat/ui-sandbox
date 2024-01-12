@@ -1,0 +1,104 @@
+$globe-shadow-width: 0.2em;
+$globe-shadow: inset 0em 0em 0px $globe-shadow-width black;
+$globe-rotation-deg: 20deg;
+
+.globeWrapper {
+  width: 130px;
+  height: 130px;
+
+  .globeExternal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: $globe-shadow;
+    border-radius: 100%;
+    overflow: hidden;
+    transform: rotate($globe-rotation-deg);
+    animation: globe 6s ease-in-out infinite;
+
+    .verLine {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset $globe-shadow-width 0px 0px 0em black;
+      animation: verLine 3s linear infinite;
+    }
+
+    .verLine1 {
+      @extend .verLine;
+      animation-delay: 0s;
+      animation-play-state: 25%;
+    }
+
+    .verLine2 {
+      @extend .verLine;
+      animation-delay: -1s;
+      animation-play-state: 50%;
+    }
+
+    .verLine3 {
+      @extend .verLine;
+      animation-delay: -2s;
+      animation-play-state: 75%;
+    }
+
+    .horLines {
+      position: absolute;
+      width: 150%;
+      height: 55%;
+      border-radius: 50%;
+      box-shadow: $globe-shadow;
+    }
+
+    .middleLine {
+      position: absolute;
+      width: 100%;
+      height: $globe-shadow-width;
+      background-color: black;
+    }
+  }
+}
+
+@keyframes globe {
+  0% {
+    transform: rotate($globe-rotation-deg);
+  }
+  50% {
+    transform: rotate(-$globe-rotation-deg);
+  }
+  100% {
+    transform: rotate($globe-rotation-deg);
+  }
+}
+
+@keyframes verLine {
+  0% {
+    border-radius: 50%;
+    width: 100%;
+    box-shadow: inset $globe-shadow-width 0px 0px 0em black;
+  }
+  49% {
+    border-radius: 50%;
+    box-shadow: inset $globe-shadow-width 0px 0px 0em black;
+    background: transparent;
+  }
+  50% {
+    border-radius: 0%;
+    box-shadow: inset 0em 0px 0px $globe-shadow-width black;
+    width: $globe-shadow-width;
+  }
+  51% {
+    border-radius: 50%;
+    box-shadow: inset calc($globe-shadow-width * -1) 0px 0px 0em black;
+    background: transparent;
+  }
+  100% {
+    border-radius: 50%;
+    box-shadow: inset calc($globe-shadow-width * -1) 0px 0px 0em black;
+
+    width: 100%;
+  }
+}
