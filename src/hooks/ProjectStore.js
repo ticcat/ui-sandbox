@@ -16,11 +16,12 @@ function Project(id, name, path, cases) {
   };
 }
 
-function ProjectCase(id, name, baseComponent) {
+function ProjectCase(id, name, baseComponent, cardSize = "normal") {
   return {
     id: id,
     name: name,
     baseComponent: baseComponent,
+    cardSize: cardSize,
   };
 }
 

@@ -5,9 +5,11 @@ import { usePathname } from "next/navigation";
 import NoContentScreen from "../NoContentScreen/NoContentScreen";
 import style from "./ContentPanel.module.css";
 
-function ContentCard({ name, component }) {
+function ContentCard({ name, component, size }) {
   return (
-    <div className={style.card}>
+    <div
+      className={`${style.card} ${size === "big" ? style.big : style.normal}`}
+    >
       <div className={style.preview}>{component}</div>
       <h2 className={style.title}>{name}</h2>
     </div>
@@ -23,6 +25,7 @@ export default function ProjectsPanel() {
       key={it.id}
       name={it.name}
       component={it.baseComponent}
+      size={it.cardSize}
     ></ContentCard>
   ));
 
