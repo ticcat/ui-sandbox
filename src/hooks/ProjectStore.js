@@ -1,11 +1,12 @@
-import RenxaMenuButton from "@/app/buttons/cases/RenxaMenuButton/RenxaMenuButton";
-import SlideTopBotButton from "@/app/buttons/cases/SlideTopBotButton/SlideTopBotButton";
-import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguerButton/StickyBubbleBurguerButtton";
-import ValorantButton from "@/app/buttons/cases/ValorantButton/ValorantButton";
+import RenxaMenuButton from "@/app/buttons/cases/RenxaMenu/RenxaMenuButton";
+import SlideTopBotButton from "@/app/buttons/cases/SlideTopBot/SlideTopBotButton";
+import StickyBubbleBurguerButton from "@/app/buttons/cases/StickyBubbleBurguer/StickyBubbleBurguerButtton";
+import ValorantButton from "@/app/buttons/cases/Valorant/ValorantButton";
 import DualQuarterCircleSpinner from "@/app/anims/cases/DualQuarterCircleSpinner/DualQuarterCircleSpinner";
 import HBOLoader from "@/app/anims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
 import RotatingGlobe from "@/app/anims/cases/RotatingGlobe/RotatingGlobe";
+import ChangeOnHoverButton from "@/app/buttons/cases/ChangeOnHover/ChangeOnHover";
 
 function Project(id, name, path, cases) {
   return {
@@ -29,23 +30,28 @@ const projectsList = [
   Project("buttons", "Buttons", "/buttons", [
     ProjectCase(
       "valorantButton",
-      "Valorant button",
+      "Valorant",
       <ValorantButton></ValorantButton>
     ),
     ProjectCase(
       "stickyBubbleBurguerButton",
-      "Dennis burguer button",
+      "Dennis burguer",
       <StickyBubbleBurguerButton></StickyBubbleBurguerButton>
     ),
     ProjectCase(
       "slideTopBotButton",
-      "Slide top bot button",
+      "Slide top bot",
       <SlideTopBotButton></SlideTopBotButton>
     ),
     ProjectCase(
       "renxaMenuButton",
-      "Renxa menu button",
+      "Renxa menu",
       <RenxaMenuButton></RenxaMenuButton>
+    ),
+    ProjectCase(
+      "changeOnHoverButton",
+      "Change on hover",
+      <ChangeOnHoverButton></ChangeOnHoverButton>
     ),
   ]),
   Project("anims", "Animations", "/anims", [
