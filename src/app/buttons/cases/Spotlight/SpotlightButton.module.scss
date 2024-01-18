@@ -2,11 +2,16 @@
 @use "../../../../globalMixins" as *;
 @import "../../../../../fonts/fonts.css";
 
+$font-color: hsl(0, 0%, 40%);
+$font-color-active: hsl(0, 0%, 95%);
 $backdrop: hsl(0 0% 60% / 0.12);
 $border-radius: 10px;
 $border-width: 2px;
 $backup-border: $backdrop;
 $size: 200px;
+
+$border-size: calc($border-width * 1);
+$spotlight-size: 100px;
 
 $base: 200;
 $spread: 400;
@@ -28,14 +33,23 @@ $spread: 400;
     border-radius: $border-radius;
     box-shadow: 0 1rem 2rem -1rem black;
     backdrop-filter: blur(calc(5px));
+    font-family: "Space grotesk";
+    font-size: 20px;
+    font-weight: 700;
+    color: $font-color;
     cursor: pointer;
+    transition: color 0.3s linear;
+  }
+
+  .isActive {
+    color: $font-color-active;
+    transition: color 0.15s linear;
   }
 
   [data-glow] {
-    $border-size: calc($border-width * 1);
-    $spotlight-size: 100px;
-    $hue: calc(100 + (var(--xH) * 100));
+    $hue: calc(100 + (var(--xH)) * 100);
 
+    position: relative;
     background-image: radial-gradient(
       $spotlight-size $spotlight-size at calc(var(--x) * 1px)
         calc(var(--y) * 1px),
@@ -48,7 +62,6 @@ $spread: 400;
     background-position: 50% 50%;
     background-attachment: fixed;
     border: $border-size solid $backup-border;
-    position: relative;
 
     &::before,
     &::after {
@@ -60,18 +73,19 @@ $spread: 400;
       background-attachment: fixed;
       background-size: calc(100% + (2 * var(--border-size)))
         calc(100% + (2 * var(--border-size)));
-      background-position: 50% 50%;
       background-repeat: no-repeat;
       pointer-events: none;
       mask: linear-gradient(transparent, transparent),
         linear-gradient(white, white);
       mask-clip: padding-box, border-box;
       mask-composite: intersect;
+      transition: background-image 4s linear forwards;
     }
 
     &::before {
       background-image: radial-gradient(
-        calc($spotlight-size * 0.75) calc($spotlight-size * 0.75) at
+        calc($spotlight-size * (var(--glow-border-mult-base) * 1))
+          calc($spotlight-size * (var(--glow-border-mult-base) * 1)) at
           calc(var(--x) * 1px) calc(var(--y) * 1px),
         hsl($hue 100% 50%),
         transparent 100%
@@ -81,7 +95,8 @@ $spread: 400;
 
     &::after {
       background-image: radial-gradient(
-        calc($spotlight-size * 0.5) calc($spotlight-size * 0.5) at
+        calc($spotlight-size * (var(--glow-border-mult-base) * 0.67))
+          calc($spotlight-size * (var(--glow-border-mult-base) * 0.67)) at
           calc(var(--x) * 1px) calc(var(--y) * 1px),
         hsl(0 100% 100%),
         transparent 100%

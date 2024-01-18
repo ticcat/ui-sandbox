@@ -19,16 +19,27 @@
           box-shadow: 0 1rem 2rem -1rem black;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  font-family: "Space grotesk";
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(0, 0%, 40%);
   cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.background .isActive {
+  color: hsl(0, 0%, 95%);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
 }
 .background [data-glow] {
-  background-image: radial-gradient(100px 100px at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(calc(100 + var(--xH) * 100), 100%, 7%), transparent);
+  position: relative;
+  background-image: radial-gradient(100px 100px at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(calc(100 + (var(--xH)) * 100), 100%, 7%), transparent);
   background-color: hsla(0, 0%, 60%, 0.12);
   background-size: calc(100% + 2 * var(--border-size)) calc(100% + 2 * var(--border-size));
   background-position: 50% 50%;
   background-attachment: fixed;
   border: 2px solid hsla(0, 0%, 60%, 0.12);
-  position: relative;
 }
 .background [data-glow]::before, .background [data-glow]::after {
   content: "";
@@ -38,7 +49,6 @@
   border-radius: 10px;
   background-attachment: fixed;
   background-size: calc(100% + 2 * var(--border-size)) calc(100% + 2 * var(--border-size));
-  background-position: 50% 50%;
   background-repeat: no-repeat;
   pointer-events: none;
   -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(white), to(white));
@@ -49,14 +59,16 @@
           mask-clip: padding-box, border-box;
   -webkit-mask-composite: source-in, xor;
           mask-composite: intersect;
+  -webkit-transition: background-image 4s linear forwards;
+  transition: background-image 4s linear forwards;
 }
 .background [data-glow]::before {
-  background-image: radial-gradient(75px 75px at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(calc(100 + var(--xH) * 100), 100%, 50%), transparent 100%);
+  background-image: radial-gradient(calc(100px * var(--glow-border-mult-base) * 1) calc(100px * var(--glow-border-mult-base) * 1) at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(calc(100 + (var(--xH)) * 100), 100%, 50%), transparent 100%);
   -webkit-filter: brightness(3);
           filter: brightness(3);
 }
 .background [data-glow]::after {
-  background-image: radial-gradient(50px 50px at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0, 100%, 100%), transparent 100%);
+  background-image: radial-gradient(calc(100px * var(--glow-border-mult-base) * 0.67) calc(100px * var(--glow-border-mult-base) * 0.67) at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0, 100%, 100%), transparent 100%);
 }
 .background [data-glow] [data-glow] {
   position: absolute;

@@ -50,7 +50,7 @@ const projectsList = [
     ),
     ProjectCase(
       "spotlightButton",
-      "Spotlight",
+      "Spotlight button",
       <SpotlightButton></SpotlightButton>
     ),
   ]),
