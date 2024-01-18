@@ -6,6 +6,7 @@ import DualQuarterCircleSpinner from "@/app/anims/cases/DualQuarterCircleSpinner
 import HBOLoader from "@/app/anims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
 import RotatingGlobe from "@/app/anims/cases/RotatingGlobe/RotatingGlobe";
+import SpotlightButton from "@/app/buttons/cases/Spotlight/SpotlightButton";
 
 function Project(id, name, path, cases) {
   return {
@@ -46,6 +47,11 @@ const projectsList = [
       "renxaMenuButton",
       "Renxa menu button",
       <RenxaMenuButton></RenxaMenuButton>
+    ),
+    ProjectCase(
+      "spotlightButton",
+      "Spotlight button",
+      <SpotlightButton></SpotlightButton>
     ),
   ]),
   Project("anims", "Animations", "/anims", [

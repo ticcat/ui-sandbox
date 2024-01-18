@@ -1,0 +1,126 @@
+@use "../../../../globalVariables" as *;
+@use "../../../../globalMixins" as *;
+@import "../../../../../fonts/fonts.css";
+
+$font-color: hsl(0, 0%, 40%);
+$font-color-active: hsl(0, 0%, 95%);
+$backdrop: hsl(0 0% 60% / 0.12);
+$border-radius: 10px;
+$border-width: 2px;
+$backup-border: $backdrop;
+$size: 200px;
+
+$border-size: calc($border-width * 1);
+$spotlight-size: 100px;
+
+$base: 200;
+$spread: 400;
+
+.background {
+  position: relative;
+  background: hsl(0 0% 4%);
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+  padding: 10px;
+  overflow: visible;
+
+  .container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 1rem;
+    border-radius: $border-radius;
+    box-shadow: 0 1rem 2rem -1rem black;
+    backdrop-filter: blur(calc(5px));
+    font-family: "Space grotesk";
+    font-size: 20px;
+    font-weight: 700;
+    color: $font-color;
+    cursor: pointer;
+    transition: color 0.3s linear;
+  }
+
+  .isActive {
+    color: $font-color-active;
+    transition: color 0.15s linear;
+  }
+
+  [data-glow] {
+    $hue: calc(100 + (var(--xH)) * 100);
+
+    position: relative;
+    background-image: radial-gradient(
+      $spotlight-size $spotlight-size at calc(var(--x) * 1px)
+        calc(var(--y) * 1px),
+      hsl($hue 100% 7%),
+      transparent
+    );
+    background-color: $backdrop;
+    background-size: calc(100% + (2 * var(--border-size)))
+      calc(100% + (2 * var(--border-size)));
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    border: $border-size solid $backup-border;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: calc($border-size * -1);
+      border: $border-size solid transparent;
+      border-radius: $border-radius;
+      background-attachment: fixed;
+      background-size: calc(100% + (2 * var(--border-size)))
+        calc(100% + (2 * var(--border-size)));
+      background-repeat: no-repeat;
+      pointer-events: none;
+      mask: linear-gradient(transparent, transparent),
+        linear-gradient(white, white);
+      mask-clip: padding-box, border-box;
+      mask-composite: intersect;
+      transition: background-image 4s linear forwards;
+    }
+
+    &::before {
+      background-image: radial-gradient(
+        calc($spotlight-size * (var(--glow-border-mult-base) * 1))
+          calc($spotlight-size * (var(--glow-border-mult-base) * 1)) at
+          calc(var(--x) * 1px) calc(var(--y) * 1px),
+        hsl($hue 100% 50%),
+        transparent 100%
+      );
+      filter: brightness(3);
+    }
+
+    &::after {
+      background-image: radial-gradient(
+        calc($spotlight-size * (var(--glow-border-mult-base) * 0.67))
+          calc($spotlight-size * (var(--glow-border-mult-base) * 0.67)) at
+          calc(var(--x) * 1px) calc(var(--y) * 1px),
+        hsl(0 100% 100%),
+        transparent 100%
+      );
+    }
+  }
+
+  [data-glow] [data-glow] {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    border: none;
+  }
+
+  [data-glow] > [data-glow] {
+    border-radius: $border-radius;
+    border-width: $border-width;
+    filter: blur(calc($border-width * 10));
+    background: none;
+    pointer-events: none;
+  }
+
+  [data-glow] > [data-glow]::before {
+    inset: -10px;
+    border-width: 10px;
+  }
+}
