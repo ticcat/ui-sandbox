@@ -22,3 +22,8 @@
   font-family: "Figtree";
   src: url("./Figtree-VariableFont_wght.ttf");
 }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./Raleway-VariableFont_wght.ttf");
+}
