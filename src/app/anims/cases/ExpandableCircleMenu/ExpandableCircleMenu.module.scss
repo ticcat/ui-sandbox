@@ -1,0 +1,77 @@
+$green: #00ff56;
+$black: #2b2a2a;
+$animation-time: 0.15s;
+$animation-function: cubic-bezier(0, 0.82, 0.82, 0.94);
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  border-radius: 15px;
+
+  .buttonsList {
+    display: block;
+    opacity: 0;
+    width: 100%;
+    padding: 1rem;
+    transform-origin: 10px 100%;
+    transition: opacity calc($animation-time / 5) $animation-function;
+
+    .button {
+      display: block;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  .circleBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    transition: height $animation-time $animation-function,
+      width $animation-time $animation-function;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $green;
+      border-radius: 15px;
+    }
+
+    &::before {
+      border-style: none none solid solid;
+    }
+
+    &::after {
+      border-style: solid solid none none;
+    }
+  }
+}
+
+.active {
+  .circleBox {
+    height: 100%;
+    width: 100%;
+  }
+
+  .buttonsList {
+    opacity: 1;
+    transition: opacity $animation-time $animation-function
+      calc($animation-time/2);
+  }
+}
+
+.text {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: $green;
+}
