@@ -70,7 +70,8 @@ const projectsList = [
     ProjectCase(
       "expandableCircleMenu",
       "Expandable menu",
-      <ExpandableCircleMenu></ExpandableCircleMenu>
+      <ExpandableCircleMenu></ExpandableCircleMenu>,
+      "big"
     ),
   ]),
 ];
