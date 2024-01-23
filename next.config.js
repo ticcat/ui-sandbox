@@ -12,7 +12,6 @@ if (isGithubActions) {
 const nextConfig = {
   output: "export",
   assetPrefix: assetPrefix,
-  basePatch: basePatch,
 };
 
 module.exports = nextConfig;
