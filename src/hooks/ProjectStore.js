@@ -7,6 +7,7 @@ import HBOLoader from "@/app/anims/cases/HBOLoader/HBOLoader";
 import { create } from "zustand";
 import RotatingGlobe from "@/app/anims/cases/RotatingGlobe/RotatingGlobe";
 import SpotlightButton from "@/app/buttons/cases/Spotlight/SpotlightButton";
+import ExpandableCircleMenu from "@/app/anims/cases/ExpandableCircleMenu/ExpandableCircleMenu";
 
 function Project(id, name, path, cases) {
   return {
@@ -65,6 +66,11 @@ const projectsList = [
       "rotatingGlobe",
       "Rotating globe",
       <RotatingGlobe></RotatingGlobe>
+    ),
+    ProjectCase(
+      "expandableCircleMenu",
+      "Expandable menu",
+      <ExpandableCircleMenu></ExpandableCircleMenu>
     ),
   ]),
 ];
