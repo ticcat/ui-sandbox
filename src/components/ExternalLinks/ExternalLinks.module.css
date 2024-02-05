@@ -1,7 +1,7 @@
 @import "/fonts/fonts.css";
 .container {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +16,8 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  background-color: black;
+  padding: 1rem;
 }
 .container .link {
   text-decoration: underline;

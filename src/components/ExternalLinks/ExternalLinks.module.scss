@@ -3,13 +3,15 @@
 
 .container {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   display: flex;
   justify-content: center;
   gap: 30px;
   align-items: center;
   width: 100%;
   height: max-content;
+  background-color: black;
+  padding: 1rem;
 
   .link {
     text-decoration: underline;

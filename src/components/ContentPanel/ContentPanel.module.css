@@ -8,8 +8,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 100px;
   gap: 30px;
+  width: 100%;
+  margin: 10px 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .container * {
   display: -webkit-box;

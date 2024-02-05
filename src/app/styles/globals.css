@@ -42,11 +42,12 @@ h4 {
           align-items: center;
   gap: 3rem;
   margin: 2rem 1rem;
+  overflow: hidden;
 }
 
 .main-container {
   display: grid;
-  grid-template-rows: -webkit-max-content 1fr;
-  grid-template-rows: max-content 1fr;
+  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-rows: max-content 1fr max-content;
   height: 100vh;
 }/*# sourceMappingURL=globals.css.map */

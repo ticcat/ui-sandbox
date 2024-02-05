@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
         <div className="main-container">
           <TopNavBar></TopNavBar>
           {children}
+          <ExternalLinks></ExternalLinks>
         </div>
-        <ExternalLinks></ExternalLinks>
       </body>
     </html>
   );
